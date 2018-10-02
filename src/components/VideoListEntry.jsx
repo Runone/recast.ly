@@ -1,10 +1,10 @@
-//import exampleVideoData from '../data/exampleVideoData.js'
-
+// import exampleVideo from '../data/exampleVideoData.js'
+import VideoPlayer from './VideoPlayer.js'
 
 var VideoListEntry = (props) => (
   <div className="video-list-entry media">
     <div className="media-left media-middle">
-      <img className="media-object" src="https://i.ytimg.com/vi/1w8Z0UOXVaY/default.jpg" alt="" />
+      <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt="youtube.com" />
     </div>
     <div className="media-body">
       <div className="video-list-entry-title">{props.video.snippet.title}</div>
