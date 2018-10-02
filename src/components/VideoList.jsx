@@ -2,7 +2,7 @@
 import VideoListEntry from './VideoListEntry.js'
 
 var VideoList = (props) => (
-    <div className= 'video-list'>{props.videos.map((video, index) => <VideoListEntry video={video} key={index}/>)}</div>
+    <div className= 'video-list'>{props.videos.map((video, index) => <VideoListEntry video={video} key={index} onVideoClick={props.onVideoClick}/>)}</div>
   )
 
 // PropTypes tell other developers what `props` a component expects

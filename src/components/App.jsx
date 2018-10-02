@@ -24,17 +24,22 @@ import Search from './VideoList.js'
 
 class App extends React.Component {
   
-  constructor (props) {
-    super (props)
+  constructor(props) {
+    super(props);
 
     this.state = {
       currentVideo: exampleVideoData[0],
       videoList: exampleVideoData
-    }     
+    };
+
+    this.onVideoClick = this.onVideoClick.bind(this);     
   }
 
   onVideoClick(video) {
-    this.currentVideo: video
+    console.log('hey');
+    this.setState({
+      currentVideo: video
+    });
   }
   
   render() {
@@ -50,7 +55,7 @@ class App extends React.Component {
             <VideoPlayer video={this.state.currentVideo}/>
           </div>
           <div className="col-md-5">
-            <VideoList videos={this.state.videoList} onVideoClick={this.onVideoClick.bind(this)/>
+            <VideoList videos={this.state.videoList} onVideoClick={this.onVideoClick}/>
           </div>
         </div>
       </div>
