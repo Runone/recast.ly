@@ -28,7 +28,7 @@ class App extends React.Component {
     super (props) 
     
     this.state = {
-      video: {exampleVideoData[0]}
+      video: {exampleVideoData}
       }
     }
 
@@ -51,7 +51,7 @@ class App extends React.Component {
         </nav>
         <div className="row">
           <div className="col-md-7">
-            <div><em>videoPlayer</em><VideoPlayer video={exampleVideoData[0]}/></div>
+            <div><em>videoPlayer</em><VideoPlayer video={exampleVideoData}/></div>
           </div>
           <div className="col-md-5">
             <VideoList videos={exampleVideoData}/>
