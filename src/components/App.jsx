@@ -26,22 +26,9 @@ class App extends React.Component {
   
   constructor (props) {
     super (props) 
-    
-    this.state = {
-      video: {exampleVideoData}
-      }
-    }
-
   }
-
-  onVideoClick() {
-    this,setState({
-      video: {this}
-    })
-  }  
-
+  
   render() {
-    
     return (
       <div>
         <nav className="navbar">
@@ -49,19 +36,49 @@ class App extends React.Component {
             <div><em>search</em></div>
           </div>
         </nav>
-        <div className="row">
+          <div className="row">
           <div className="col-md-7">
-            <div><em>videoPlayer</em><VideoPlayer video={exampleVideoData}/></div>
           </div>
-          <div className="col-md-5">
-            <VideoList videos={exampleVideoData}/>
-          </div>
-        </div>
+          </div> 
       </div>
-    );  
+    )
   }
-
 }
+    
+// fix Videoplayer div and Videolist div
+
+
+
+  //   this.video = this.onVideoClick.bind(this);
+  //   }
+
+  // }
+
+  // onVideoClick(index) {
+  //   this.setState({ video: this.state.videos[index]})
+  // }  
+
+  // render() {
+    
+  //   return (
+  //     <div>
+  //       <nav className="navbar">
+  //         <div className="col-md-6 offset-md-3">
+  //           <div><em>search</em></div>
+  //         </div>
+  //       </nav>
+        // <div className="row">
+        //   <div className="col-md-7">
+        //     <VideoPlayer video={this.props.exampleVideoData[0]}/>
+        //   </div>
+  //         <div className="col-md-5">
+  //           <VideoList videos={this.props.exampleVideoData}/>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );  
+  // }
+
 
 
 
