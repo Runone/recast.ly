@@ -33,8 +33,6 @@ class App extends React.Component {
       currentVideo: exampleVideoData[0],
       videoList: exampleVideoData
     };
-    
-    this.items = null;
 
     this.onVideoClick = this.onVideoClick.bind(this);
     this.handleSearch = this.handleSearch.bind(this);    
@@ -48,7 +46,6 @@ class App extends React.Component {
 
   handleSearch(query = null, max = 5) {
     var options = {query: query, max: max, key: YOUTUBE_API_KEY}
-    var carrier = this;
     searchYouTube(options, data => {
       this.setState({
         currentVideo: data[0],
@@ -57,6 +54,9 @@ class App extends React.Component {
     })
   }
 
+  // componentDidMount() {
+  //   this.handleSearch('danny');
+  // }
   // setNew() {
   //   this.setState({
   //     currentVideo: items[0],
